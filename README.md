@@ -1,4 +1,4 @@
-# wether-bot
+# weather-bot
 
 ## 制作目的
 
