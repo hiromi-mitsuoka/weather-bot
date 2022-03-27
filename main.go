@@ -8,9 +8,10 @@ import (
 )
 
 // NOTE: LINE BOT docs(https://github.com/line/line-bot-sdk-go)
+
 func main() {
 	bot, err := linebot.New(
-		// How to set to Heroku (
+		// NOTE: How to set to Heroku (
 		// https://devcenter.heroku.com/ja/articles/config-vars#set-a-config-var
 		// https://poster.ooo/howto/check-access-token/
 		// )
