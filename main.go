@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/hiromi-mitsuoka/wether-bot/weather"
 	"github.com/line/line-bot-sdk-go/linebot"
 )
 
@@ -22,13 +23,12 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// result, err := weather.GetWeather()
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
+	result, err := weather.GetWeather()
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	// message := linebot.NewTextMessage(result)
-	message := linebot.NewTextMessage("hello world")
+	message := linebot.NewTextMessage(result)
 
 	// NOTE: Send to all registered friends (https://developers.line.biz/ja/reference/messaging-api/#send-broadcast-message)
 	if _, err := bot.BroadcastMessage(message).Do(); err != nil {
