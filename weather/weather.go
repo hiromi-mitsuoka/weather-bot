@@ -66,6 +66,7 @@ func formatWeather(body []byte) (*Weather, error) {
 	return weather, nil
 }
 
+// Method Definition
 func (w *Weather) ToS() string {
 	area := fmt.Sprintf("%sの天気です。\n", w.Area)
 	head := fmt.Sprintf("%s\n", w.HeadLine)
